@@ -405,7 +405,7 @@ class Chosen extends AbstractChosen
     this.result_do_highlight do_high if do_high?
 
   no_results: (terms) ->
-    no_results_html = $('<li class="no-results"> "<span></span>"' + @results_none_found + '</li>')
+    no_results_html = $('<li class="no-results"> <a href="javascript:void(0)" class="add_new"> "<span></span>"' + @results_none_found + '</a></li>')
     no_results_html.find("span").first().html(terms)
 
     @search_results.append no_results_html
