@@ -174,7 +174,7 @@ class AbstractChosen
 
     if results < 1 and searchText.length
       this.update_results_content ""
-      this.no_results(searchText, [a, b])
+      this.no_results(searchText, ['a', 'b'])
     else
       #TODO add links
       this.update_results_content this.results_option_build()
