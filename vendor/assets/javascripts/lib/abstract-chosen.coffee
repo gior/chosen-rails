@@ -174,7 +174,7 @@ class AbstractChosen
 
     if results < 1 and searchText.length
       this.update_results_content ""
-      this.no_results(searchText, ['a', 'b'])
+      this.no_results(searchText, [{text:'To add it as a new Production, click here', classes: 'add-prod', href: '#'}, {text:'To leave as text only, click here.', classes: 'add_text', href: '#'}])
     else
       #TODO add links
       this.update_results_content this.results_option_build()
