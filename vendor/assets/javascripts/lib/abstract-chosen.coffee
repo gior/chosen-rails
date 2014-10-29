@@ -56,6 +56,7 @@ class AbstractChosen
 
   results_option_build: (options) ->
     content = ''
+    console.log(@results_data.toSource())
     for data in @results_data
       if data.group
         content += this.result_add_group data
