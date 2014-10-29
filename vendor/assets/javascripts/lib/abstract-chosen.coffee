@@ -173,6 +173,9 @@ class AbstractChosen
     this.result_clear_highlight()
 
     if results < 1 and searchText.length
+      console.log('formField: ' + @form_field)
+      console.log('plain: ' + @form_field.getAttribute("data-no_results_links"))
+      console.log('parsed: ' + JSON.parse(@form_field.getAttribute("data-no_results_links")))
       this.update_results_content ""
       this.no_results(searchText, JSON.parse(@form_field.getAttribute("data-no_results_links")) )
     else
