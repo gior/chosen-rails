@@ -48,7 +48,7 @@ $chosen-sprite-retina: image-url('chosen-sprite@2x.png') !default;
     border: 1px solid #aaa;
     border-radius: 5px;
     background-color: #fff;
-    @include background(linear-gradient(top, #fff 20%, #f6f6f6 50%, #eee 52%, #f4f4f4 100%));
+//    @include background(linear-gradient(top, #fff 20%, #f6f6f6 50%, #eee 52%, #f4f4f4 100%));
     background-clip: padding-box;
     box-shadow: 0 0 3px #fff inset, 0 1px 1px rgba(#000,.1);
     color: #444;
@@ -161,7 +161,7 @@ $chosen-sprite-retina: image-url('chosen-sprite@2x.png') !default;
     }
     &.highlighted {
       background-color: #7ad6e7;
-      @include background-image(linear-gradient(#7ad6e7 20%, #25b5d0 90%));
+//      @include background-image(linear-gradient(#7ad6e7 20%, #25b5d0 90%));
       color: #fff;
     }
     &.no-results {
@@ -197,7 +197,7 @@ $chosen-sprite-retina: image-url('chosen-sprite@2x.png') !default;
     height: 1%;
     border: 1px solid #aaa;
     background-color: #fff;
-    @include background-image(linear-gradient(#eee 1%, #fff 15%));
+//    @include background-image(linear-gradient(#eee 1%, #fff 15%));
     cursor: text;
   }
   .chosen-choices li {
@@ -230,7 +230,7 @@ $chosen-sprite-retina: image-url('chosen-sprite@2x.png') !default;
       max-width: 100%;
       border-radius: 3px;
       background-color: #eeeeee;
-      @include background-image(linear-gradient(#f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eee 100%));
+//      @include background-image(linear-gradient(#f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eee 100%));
       background-size: 100% 19px;
       background-repeat: repeat-x;
       background-clip: padding-box;
@@ -259,7 +259,7 @@ $chosen-sprite-retina: image-url('chosen-sprite@2x.png') !default;
       padding-right: 5px;
       border: 1px solid #ccc;
       background-color: #e4e4e4;
-      @include background-image(linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eee 100%));
+//      @include background-image(linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eee 100%));
       color: #666;
     }
     &.search-choice-focus {
@@ -294,7 +294,7 @@ $chosen-sprite-retina: image-url('chosen-sprite@2x.png') !default;
       border-bottom-right-radius: 0;
       -moz-border-radius-bottomleft: 0;
       border-bottom-left-radius: 0;
-      @include background-image(linear-gradient(#eee 20%, #fff 80%));
+//      @include background-image(linear-gradient(#eee 20%, #fff 80%));
       box-shadow: 0 1px 0 #fff inset;
     }
     .chosen-single div {
