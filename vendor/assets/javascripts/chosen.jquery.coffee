@@ -409,9 +409,11 @@ class Chosen extends AbstractChosen
     no_results_html.find("span").first().html(terms)
     @search_results.append no_results_html
 
-#    for link in links
-#      link_html = $('<li class="no-results"><a href="javascript:void(0)" class="add_new">' + 'sometext' + '</a></li>')
-#      @search_results.append link_html
+    console.log('links: ' + links.toSource)
+    for link in links
+      console.log link
+      link_html = $('<li class="no-results"><a href="javascript:void(0)" class="add_new">' + 'sometext' + '</a></li>')
+      @search_results.append link_html
 
     @form_field_jq.trigger("chosen:no_results", {chosen:this})
 
