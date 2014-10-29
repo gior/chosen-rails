@@ -409,7 +409,6 @@ class Chosen extends AbstractChosen
     no_results_html.find("span").first().html(terms)
     @search_results.append no_results_html
 
-    console.log('links: ' + links.toSource)
     for link in links
       console.log link
       link_html = $('<li class="no-results ' + link.classes + '"><a href="' + link.href + '" class="add_new">' + link.text + '</a></li>')
