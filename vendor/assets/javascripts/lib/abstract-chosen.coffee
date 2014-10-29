@@ -70,8 +70,10 @@ class AbstractChosen
           this.choice_build data
         else if data.selected and not @is_multiple
           this.single_set_selected_text(data.text)
-
     content
+
+  result_add_link: (link) ->
+    return
 
   result_add_option: (option) ->
     return '' unless option.search_match
@@ -172,8 +174,9 @@ class AbstractChosen
 
     if results < 1 and searchText.length
       this.update_results_content ""
-      this.no_results searchText
+      this.no_results searchText #TODO add links
     else
+      #TODO add links
       this.update_results_content this.results_option_build()
       this.winnow_results_set_highlight()
 
