@@ -59,8 +59,6 @@ class AbstractChosen
     if (this.get_search_text())
       for link in this.options.some_results_links
         content += this.result_add_optional_link link
-    console.log('@results_data: ' + @results_data.toSource())
-    console.log(this.options)
     for data in @results_data
       if data.group
         content += this.result_add_group data
@@ -177,8 +175,6 @@ class AbstractChosen
     this.result_clear_highlight()
 
     if results < 1 and searchText.length
-#      console.log('parsed: ' + JSON.parse(@form_field.getAttribute("data-no_results_links")))
-#      console.log('object: ' + $('#resume_role_production_id').data('chosen').options.no_results_links )
       this.update_results_content ""
       this.no_results(searchText, this.options.no_results_links )
     else
