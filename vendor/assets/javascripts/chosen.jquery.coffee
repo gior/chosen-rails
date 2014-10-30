@@ -226,7 +226,6 @@ class Chosen extends AbstractChosen
     @result_highlight = null
 
   results_show: ->
-    # TODO: add link field
     if @is_multiple and @max_selected_options <= this.choices_count()
       @form_field_jq.trigger("chosen:maxselected", {chosen: this})
       return false

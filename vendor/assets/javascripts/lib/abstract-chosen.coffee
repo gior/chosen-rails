@@ -56,7 +56,11 @@ class AbstractChosen
 
   results_option_build: (options) ->
     content = ''
-    console.log(@results_data.toSource())
+    if (this.get_search_text())
+      for link in this.options.some_results_links
+        content += this.result_add_optional_link link
+    console.log('@results_data: ' + @results_data.toSource())
+    console.log(this.options)
     for data in @results_data
       if data.group
         content += this.result_add_group data
@@ -72,8 +76,8 @@ class AbstractChosen
           this.single_set_selected_text(data.text)
     content
 
-  result_add_link: (link) ->
-    return
+  result_add_optional_link: (link) ->
+    '<li class="no-results ' + link.classes + '"><a href="' + link.href + '">' + link.text + '</a></li>'
 
   result_add_option: (option) ->
     return '' unless option.search_match
@@ -176,10 +180,8 @@ class AbstractChosen
 #      console.log('parsed: ' + JSON.parse(@form_field.getAttribute("data-no_results_links")))
 #      console.log('object: ' + $('#resume_role_production_id').data('chosen').options.no_results_links )
       this.update_results_content ""
-      #TODO fix missing links
       this.no_results(searchText, this.options.no_results_links )
     else
-      #TODO add links
       this.update_results_content this.results_option_build()
       this.winnow_results_set_highlight()
 

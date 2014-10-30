@@ -84,6 +84,24 @@ If you use simple form as form builder
 
 Since version 0.13.0, non-digested assets of `chosen-rails` will simply be copied from digested assets.
 
+## Custom additions
+The jQuery plugin ca be called with 2 new options
+
+### optional links when select search results are empty
+```coffee
+$('.chosen-select').chosen
+  no_results_links: [{"text":"Click here", "classes": "some class", "href": "www.example.com"}, {"text":"Follow this", "classes": "", "href": "#"}]
+```
+adds two links under the select search field, with custom text, CSS classes and href.
+
+### optional links when select search results are NOT empty
+```coffee
+$('.chosen-select').chosen
+  some_results_links: [{"text":"To add it as a new Production, click here", "classes": "add_prod", "href": "#"}]
+```
+adds one link under the select search field, with custom text, CSS classes and href.
+
+
 ## Gem maintenance
 
 Maintain `chosen-rails` gem with `Rake` commands.
