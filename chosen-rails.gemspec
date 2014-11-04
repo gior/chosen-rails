@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.email         = ['tsechingho@gmail.com']
   gem.description   = %q{Chosen is a javascript library of select box enhancer for jQuery and Protoype. This gem integrates Chosen with Rails asset pipeline for easy of use.}
   gem.summary       = %q{Integrate Chosen javascript library with Rails asset pipeline}
-  gem.homepage      = 'https://github.com/tsechingho/chosen-rails'
+  gem.homepage      = 'https://github.com/gior/chosen-rails'
 
   gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   gem.files         = `git ls-files`.split("\n")
