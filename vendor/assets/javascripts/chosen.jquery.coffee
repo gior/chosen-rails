@@ -411,7 +411,7 @@ class Chosen extends AbstractChosen
     @search_results.append no_results_html
 
     for link in links
-      link_html = $('<li class="' + link.classes + '"><a href="' + link.href + '" class="add_new">' + link.text + '</a></li>')
+      link_html = $('<li class="no-results ' + link.classes + '"><a href="' + link.href + '" class="add_new">' + link.text + '</a></li>')
       @search_results.append link_html
 
     @form_field_jq.trigger("chosen:no_results", {chosen:this})
