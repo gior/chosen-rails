@@ -57,8 +57,9 @@ class AbstractChosen
   results_option_build: (options) ->
     content = ''
     if (this.get_search_text())
-      for link in this.options.some_results_links
-        content += this.result_add_optional_link link
+      if this.options.some_results_links
+        for link in this.options.some_results_links
+          content += this.result_add_optional_link link
     for data in @results_data
       if data.group
         content += this.result_add_group data
